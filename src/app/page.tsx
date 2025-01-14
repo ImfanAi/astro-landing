@@ -4,7 +4,6 @@ import Feature from "@/components/landing-page/Features";
 import Footer from "@/components/landing-page/Footer";
 import Joinus from "@/components/landing-page/Joinus";
 import Roadmap from "@/components/landing-page/Roadmap";
-import Image from "next/image";
 
 export default function Home() {
   return (

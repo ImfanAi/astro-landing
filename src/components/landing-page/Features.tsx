@@ -24,7 +24,9 @@ export default function Feature() {
             <p className="md:text-6xl text-4xl font-extrabold mb-[64px]">Features</p>
             <div className="lg:grid lg:grid-rows-2 lg:grid-flow-col lg:gap-y-24 lg:gap-x-16 flex flex-col gap-8">
                {Features.map((Feature) => (
-                  <div className="flex flex-col justify-start items-start h-full p-10 border-2 border-gray-400 rounded-3xl bg-gray-300 bg-opacity-10">
+                  <div className="flex flex-col justify-start items-start h-full p-10 border-2 border-gray-400 rounded-3xl bg-gray-300 bg-opacity-10"
+                     key={`${Feature.title}_key`}
+                  >
                      <div className="text-4xl font-bold mb-[20px]">
                         {Feature.title}
                      </div>
