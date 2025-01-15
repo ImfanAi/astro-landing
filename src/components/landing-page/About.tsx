@@ -2,22 +2,22 @@
 import Image from "next/image";
 import Search from "../custom/searchBar";
 import React from "react";
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls, useGLTF, useAnimations } from '@react-three/drei';
-import * as THREE from 'three';
+// import { Canvas } from '@react-three/fiber';
+// import { OrbitControls, useGLTF, useAnimations } from '@react-three/drei';
+// import * as THREE from 'three';
 
-function Model() {
-   const { scene, animations } = useGLTF('/assets/model.glb');
-   const { actions } = useAnimations(animations, scene);
-   console.log(actions);
-   React.useEffect(() => {
-      if(actions) {
-         actions.idle?.setLoop(THREE.LoopRepeat, Infinity);
-         actions.idle?.play();
-      }
-   }, [actions]);
-   return <primitive object={scene} scale={2} position={[0, -2, 0]}/>;
-};
+// function Model() {
+//    const { scene, animations } = useGLTF('/assets/model.glb');
+//    const { actions } = useAnimations(animations, scene);
+//    console.log(actions);
+//    React.useEffect(() => {
+//       if(actions) {
+//          actions.idle?.setLoop(THREE.LoopRepeat, Infinity);
+//          actions.idle?.play();
+//       }
+//    }, [actions]);
+//    return <primitive object={scene} scale={2} position={[0, -2, 0]}/>;
+// };
 export default function Astro() {
    return (
       <section id="About">
