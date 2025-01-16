@@ -66,7 +66,7 @@ function Model({ query, loading, status, audioURL }: ModelProps) {
    );
 };
 export default function Astro() {
-   const { message, audioURL, audioDuration, loading, status, handleQuery } = useQuery();
+   const { message, audioURL, loading, status, handleQuery } = useQuery();
    return (
       <section id="About">
          <div className="bg-[url('/assets/about.jpg')] bg-no-repeat bg-cover bg-center h-screen w-full flex flex-col justify-between items-center lg:pt-24 lg:pb-12 px-12 pb-20 pt-24 font-[family-name:var(--font-geist-mono)]"

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import axios from "axios";
-import { audio } from "motion/react-client";
 
 export enum AstroStatus {
    Idle ="idle",
