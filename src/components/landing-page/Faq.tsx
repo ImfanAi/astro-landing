@@ -35,9 +35,9 @@ export default function Faq() {
 
    return (
       <section id="FAQs">
-         <div className="align-top flex flex-col justify-center items-center w-full mx-auto mt-32 font-[family-name:var(--font-geist-mono)]">
+         <div className="align-top flex flex-col justify-center items-center w-full mx-auto md:px-10 mt-32 font-[family-name:var(--font-geist-mono)]">
             <p className="md:text-6xl text-4xl font-extrabold mb-[64px]">FAQs</p>
-            <div className="lg:grid lg:grid-rows-2 lg:grid-flow-col lg:gap-y-12 lg:gap-x-16 flex flex-col gap-8">
+            <div className="lg:grid lg:grid-rows-2 lg:grid-flow-col lg:gap-y-12 xl:gap-x-16 lg:gap-x-6 flex flex-col gap-8">
                {
                   faqs.map((_faq: FAQ) => <FaqItem key={_faq.title} question={_faq.title} answer={_faq.description}/>)
                }

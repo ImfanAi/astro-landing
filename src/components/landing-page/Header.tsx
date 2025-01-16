@@ -9,7 +9,7 @@ export default function Header() {
    const [showDrop, setShowDrop] = React.useState(false);
 
    return (
-      <header className="bg-[#0c111e] text-white fixed top-0 left-0 w-full px-4 py-2 z-50 font-[family-name:var(--font-geist-mono)]">
+      <header className="bg-[#0c111e] text-white fixed top-0 left-0 w-full px-4 py-2 z-20 font-[family-name:var(--font-geist-mono)]">
          <div className="hidden lg:flex justify-between items-center">
             <div className="flex items-center space-x-2">
                <Image

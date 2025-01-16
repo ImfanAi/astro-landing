@@ -1,0 +1,1 @@
+export const QUERY_API = process.env.NEXT_PUBLIC_API_QUERY;

@@ -5,7 +5,7 @@ export default function Footer() {
          <div className="bg-[#0c111e] text-white flex justify-between items-center py-4 md:px-10 px-5 mt-32">
             <div className="text-sm md:flex md:flex-row flex flex-col">
                <div>
-                  ©2025 MeetAstro
+                  ©2025 MeetAstro &nbsp;
                </div>
                <div>
                   All rights reserved.
