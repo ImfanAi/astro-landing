@@ -16,12 +16,12 @@ const roadMapTitle: string[] = [
    "Ecosystem Growth"
 ]
 
-const roadMapCompleted: string[] = [
-   "completed",
-   "ongoing",
-   "planned",
-   "planned",
-]
+// const roadMapCompleted: string[] = [
+//    "completed",
+//    "ongoing",
+//    "planned",
+//    "planned",
+// ]
 
 const _roadmaps: ITEM[][] = [
    [

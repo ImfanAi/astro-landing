@@ -27,7 +27,7 @@ export default function Header() {
                <HeaderItem title="JoinUs" />
                <HeaderItem title="FAQs" />
             </div>
-            <EnterButton title="Get Started" />
+            <EnterButton />
          </div>
          <div className="flex xl:hidden justify-between items-center">
             <div className="flex items-center space-x-2">
@@ -40,7 +40,7 @@ export default function Header() {
                <p className="font-bold text-lg">MeetAstro</p>
             </div>
             <div className="flex items-center space-x-2 justify-center">
-               <EnterButton title="Get Started" />
+               <EnterButton />
                <div className='xl:hidden block cursor-pointer hover:opacity-70'>
                   <Icon onClick={() => setShowDrop(!showDrop)} icon="ic:round-list" className='text-white text-4xl' />
                </div>
