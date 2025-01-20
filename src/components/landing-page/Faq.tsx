@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import FaqItem from "../custom/faqItem";
+import Image from "next/image";
 
 type FAQ = {
   title: string,
@@ -35,9 +36,52 @@ export default function Faq() {
 
    return (
       <section id="FAQs">
-         <div className="align-top flex flex-col justify-center items-center w-full mx-auto md:px-10 mt-32 font-[family-name:var(--font-geist-mono)]">
-            <p className="md:text-6xl text-4xl font-extrabold mb-[64px]">FAQs</p>
-            <div className="lg:grid lg:grid-rows-2 lg:grid-flow-col lg:gap-y-12 xl:gap-x-16 lg:gap-x-6 flex flex-col gap-8">
+         <div className="relative align-top flex flex-col justify-center items-center w-full mx-auto md:px-10 2xl:py-32 xl:py-28 lg:py-20 py-12 font-[family-name:var(--font-monterial)]">
+            <div
+               style={{
+                  background: "radial-gradient(circle at 0% 70%, #2D1058 0%, transparent 40%)", /* Adjust the blur value as needed */
+                  opacity: "20%",
+                  width: "100%", /* Adjust the width as needed */
+                  height: "100%", /* Adjust the height as needed */
+                  position: "absolute", /* Ensure it covers the entire container */
+                  top: 0,
+                  left: 0,
+               }} 
+            />
+            <div
+               style={{
+                  background: "radial-gradient(circle at 70% 0%, #962E71 0%, transparent 40%)", /* Adjust the blur value as needed */
+                  opacity: "20%",
+                  width: "100%", /* Adjust the width as needed */
+                  height: "100%", /* Adjust the height as needed */
+                  position: "absolute", /* Ensure it covers the entire container */
+                  top: 0,
+                  left: 0,
+               }} 
+            />
+            <div
+               style={{
+                  background: "radial-gradient(circle at 70% 100%, #962E71 0%, transparent 40%)", /* Adjust the blur value as needed */
+                  opacity: "20%",
+                  width: "100%", /* Adjust the width as needed */
+                  height: "100%", /* Adjust the height as needed */
+                  position: "absolute", /* Ensure it covers the entire container */
+                  top: 0,
+                  left: 0,
+               }} 
+            />
+            <p className="bg-gradient-to-r from-[#962E71] via-[#E15025] to-[#F88B1A] bg-clip-text text-transparent md:text-9xl text-8xl font-extra-bold font-[family-name:var(--font-quinn-bold)] mb-[64px]">FAQ</p>
+            <div className="relative flex flex-col xl:w-4/5 md:w-full w-5/6 mx-auto gap-8">
+               <div className="relative z-2">
+                  <Image
+                     src="/assets/faq.gif"
+                     alt="Astro"
+                     width={150}
+                     height={150}
+                     layout="responsive"
+                     className="absolute w-full max-w-[80px] md:max-w-[100px] lg:max-w-[100px] xl:max-w-[140px] 2xl:max-w-[160px] 2xl:left-12 2xl:-top-52 xl:left-8 xl:-top-44 lg:-top-28 lg:left-8 left-4 -top-20" 
+                  />
+               </div>
                {
                   faqs.map((_faq: FAQ) => <FaqItem key={_faq.title} question={_faq.title} answer={_faq.description}/>)
                }

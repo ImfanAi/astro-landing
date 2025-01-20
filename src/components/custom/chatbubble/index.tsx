@@ -34,6 +34,7 @@ export default function ChatBubble({ message, visible, loading }: ChatBubbleProp
                   <div className="line"></div>
                </div>
             </div>
+            // <div className="dot-flashing"></div>
          ) : (
             <p>{message}</p>
          )}

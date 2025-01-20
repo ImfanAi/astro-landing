@@ -15,7 +15,7 @@ export default function Search({ onSearch }: SearchProps) {
    }
    return (
       <motion.div 
-         className="relative w-1/2 mx-auto rounded-full border-2 border-[#27aae1] bg-[#686969] bg-opacity-25 backdrop-blur-md"
+         className="relative lg:w-1/2 w-[300px] mx-auto rounded-full border-2 border-[#E15025] bg-[#E15025] bg-opacity-5 backdrop-blur-md"
       >
          <form onSubmit={handleSubmit}>
             <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-300 sr-only dark:text-white">Search</label>
@@ -30,6 +30,7 @@ export default function Search({ onSearch }: SearchProps) {
                   id="default-search" 
                   className="block w-full rounded-full p-4 ps-10 text-sm bg-transparent border-none focus:outline-none focus:ring-0" 
                   placeholder="Ask Astro..."
+                  autoComplete="off"
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
                />

@@ -69,12 +69,77 @@ export default function Astro() {
    const { message, audioURL, loading, status, handleQuery } = useQuery();
    return (
       <section id="About">
-         <div className="bg-[url('/assets/about.jpg')] bg-no-repeat bg-cover bg-center h-screen w-full flex flex-col justify-between items-center lg:pt-24 lg:pb-12 px-12 pb-20 pt-24 font-[family-name:var(--font-geist-mono)]"
+         <div className="relative h-screen w-full flex flex-col justify-between items-center lg:pt-24 lg:pb-12 px-12 pb-20 pt-24 font-[family-name:var(--font-geist-mono)] backdrop-blur-sm"
          >
-            <div className="flex lg:text-8xl md:text-6xl text-4xl font-bold">
-               Meet Astro
-            </div>
-            <div className="w-full h-2/3 flex flex-row justify-between items-center">
+            <div className="absolute inset-0 bg-no-repeat bg-bottom bg-contain 2xl:bottom-[120px] xl:bottom-[160px] lg:bottom-[180px] md:bottom-[200px] bottom-[240px]" style={{ backgroundImage: "url('/assets/spline.svg')" }}></div>
+            <div
+               style={{
+                  background: "radial-gradient(circle at 10% 20%, #E15025 0%, transparent 30%)", /* Adjust the blur value as needed */
+                  opacity: "60%",
+                  width: "100%", /* Adjust the width as needed */
+                  height: "100%", /* Adjust the height as needed */
+                  position: "absolute", /* Ensure it covers the entire container */
+                  top: 0,
+                  left: 0,
+               }} 
+            />
+            <div
+               style={{
+                  background: "radial-gradient(circle at 10% 40%, #962E71 0%, transparent 60%)",/* Adjust the blur value as needed */
+                  opacity: "40%",
+                  width: "80%", /* Adjust the width as needed */
+                  height: "100%", /* Adjust the height as needed */
+                  position: "absolute", /* Ensure it covers the entire container */
+                  top: 0,
+                  left: 0,
+               }} 
+            />
+            <div
+               style={{
+                  background: "radial-gradient(circle at 100% 40%, #962E71 0%, transparent 40%)",/* Adjust the blur value as needed */
+                  opacity: "100%",
+                  width: "100%", /* Adjust the width as needed */
+                  height: "100%", /* Adjust the height as needed */
+                  position: "absolute", /* Ensure it covers the entire container */
+                  bottom: 0,
+                  right: 0,
+               }} 
+            />
+            <div
+               style={{
+                  background: "radial-gradient(circle at 100% 80%, #2D1058 0%, transparent 20%)",/* Adjust the blur value as needed */
+                  opacity: "50%",
+                  backdropFilter: "blur(20px)",
+                  width: "100%", /* Adjust the width as needed */
+                  height: "100%", /* Adjust the height as needed */
+                  position: "absolute", /* Ensure it covers the entire container */
+                  bottom: 0,
+                  right: 0,
+               }} 
+            />
+            <div
+               style={{
+                  background: "radial-gradient(circle at 90% 50%, #F88B1A 0%, transparent 20%)",/* Adjust the blur value as needed */
+                  opacity: "50%",
+                  width: "100%", /* Adjust the width as needed */
+                  height: "100%", /* Adjust the height as needed */
+                  position: "absolute", /* Ensure it covers the entire container */
+                  bottom: 0,
+                  right: 0,
+               }} 
+            />
+            {/* <div className="flex justify-center mx-auto my-auto items-center text-center lg:text-9xl md:text-7xl text-6xl font-bold">
+               MEET ASTRO
+            </div> */}
+            {/* <div className="absolute inset-0 flex flex-row justify-between items-center mx-auto w-2/3 opacity-80">
+               <div className="text-center lg:text-9xl md:text-7xl text-6xl font-bold">
+                  MEET
+               </div>
+               <div className="text-center lg:text-9xl md:text-7xl text-6xl font-bold">
+                  ASTRO
+               </div>
+            </div> */}
+            <div className="w-full h-4/5 my-auto flex flex-row justify-between items-center">
                <div className="relative w-full h-full">
                   <Canvas
                      camera={{

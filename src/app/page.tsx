@@ -14,10 +14,10 @@ export default function Home() {
         <Intro />
         <Feature />
         <Roadmap />
-        <Joinus />
         <Faqs />
+        <Joinus />
+        {/* <Footer /> */}
       </main>
-      <Footer />
     </div>
   );
 }

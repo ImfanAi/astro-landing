@@ -10,7 +10,7 @@ export default function HeaderItem({title}: HeaderItemProps) {
          whileHover={{ scale: 1.2 }}
          whileTap={{ scale: 0.8 }}
       >
-         <a href={href} className="hover:text-[#27aae1] font-bold">
+         <a href={href} className="hover:text-[#27aae1] font-bold text-lg opacity-60">
             {title}
          </a>
       </motion.p>
