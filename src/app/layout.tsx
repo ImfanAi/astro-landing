@@ -14,11 +14,6 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
-const manRope = localFont({
-  src: "./fonts/ManRope.ttf",
-  variable: "--font-man-rope",
-  weight: "100 900",
-});
 const monterialThin = localFont({
   src: "./fonts/Monterial.otf",
   variable: "--font-monterial-thin",
@@ -48,7 +43,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${manRope.variable} ${monterialThin.variable} ${monterialBold.variable} ${quinnBold.variable}  antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${quinnBold.variable}  antialiased`}
       >
         <ScrollLinked />
         <Header />
