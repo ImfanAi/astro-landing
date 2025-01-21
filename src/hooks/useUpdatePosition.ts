@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 export function useUpdatePosition (loading: boolean) {
    const [bubblePosition, setBubblePosition] = useState<[number, number, number]>([0.8, 2.4, 0]);
-   const [modelScale, setModelScale] = useState(1.5);
+   // const [modelScale, setModelScale] = useState(1.5);
    const [modelPosition, setModelPosition] = useState<[number, number, number]>([0, -1.5, 0]);
    useEffect(() => {
       const updatePosition = () => {
@@ -37,5 +37,5 @@ export function useUpdatePosition (loading: boolean) {
       return () => window.removeEventListener("resize", updatePosition);
    }, []);
 
-   return { bubblePosition, modelScale, modelPosition };
+   return { bubblePosition, modelPosition };
 }

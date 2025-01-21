@@ -18,7 +18,7 @@ function Model({ query, loading, status, audioURL }: ModelProps) {
    const { scene, animations } = useGLTF('/assets/model.glb');
    const { actions } = useAnimations(animations, scene);
    // Update the chatbubble position with screen size
-   const {bubblePosition, modelScale, modelPosition} = useUpdatePosition(loading);
+   const {bubblePosition, modelPosition} = useUpdatePosition(loading);
    console.log("modelPosition ====> ", modelPosition);
    console.log("bubblePosition ========> ", bubblePosition);
    React.useEffect(() => {
@@ -56,7 +56,7 @@ function Model({ query, loading, status, audioURL }: ModelProps) {
    }, [status, audioURL]);
    return (
       <>
-         <primitive object={scene} scale={modelScale} position={modelPosition}/>
+         <primitive object={scene} scale={1.5} position={modelPosition}/>
          <Html position={bubblePosition}>
             <ChatBubble 
                message={query} 
