@@ -1,15 +1,35 @@
 import { useEffect, useState } from "react";
 
-export function useUpdatePosition () {
-   const [htmlPosition, setHtmlPosition] = useState<[number, number, number]>([1, 0.5, 0]);
-
+export function useUpdatePosition (loading: boolean) {
+   const [bubblePosition, setBubblePosition] = useState<[number, number, number]>([0.8, 2.4, 0]);
+   const [modelScale, setModelScale] = useState(1.5);
+   const [modelPosition, setModelPosition] = useState<[number, number, number]>([0, -1.5, 0]);
    useEffect(() => {
       const updatePosition = () => {
-         if (window.innerWidth < 768) {
-            setHtmlPosition([0.8, 1, 0]);
+         if ( loading ) {
+            if ( window.innerHeight < 425 ) {
+               setBubblePosition([0, 2, 0]);
+            } else {
+               setBubblePosition([0.9, 2, 0]);
+            }
          } else {
-            setHtmlPosition([1, 1, 0]);
-         }
+            if ( window.innerHeight < 640) {
+               setBubblePosition([0.8, 1, 0]);
+               setModelPosition([-2, -3.5, 2]);
+            } else if ( window.innerHeight < 768 ) {
+               setBubblePosition([0.8, 1, 0]);
+               setModelPosition([-2, -3.5, 2]);
+            } else if ( window.innerHeight < 1024 ) {
+               setBubblePosition([0.8, 2.4, 0]);
+               setModelPosition([0, -1.5, 0]);
+            } else if (window.innerWidth < 1440) {
+               setBubblePosition([0.8, 2.4, 0]);
+               setModelPosition([0, -1.5, 0]);
+            } else {
+               setBubblePosition([0.8, 2.4, 0]);
+               setModelPosition([0, -1.5, 0]);
+            }
+         }       
       }
       
       window.addEventListener("resize", updatePosition);
@@ -17,5 +37,5 @@ export function useUpdatePosition () {
       return () => window.removeEventListener("resize", updatePosition);
    }, []);
 
-   return htmlPosition;
+   return { bubblePosition, modelScale, modelPosition };
 }

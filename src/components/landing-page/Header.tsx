@@ -18,7 +18,10 @@ export default function Header() {
                   width={48}
                   height={48}
                />
-               <p className="font-bold lg:text-2xl text-xl">MEET ASTRO</p>
+               <div className="h-full flex flex-row mx-0 text-3xl font-[family-name:var(--font-quinn-bold)]">
+                  <div>M</div>
+                  <div>eet astro</div>
+               </div>
             </div>
             <div className="flex items-center 2xl:space-x-[70px] xl:space-x-[40px] justify-center">
                <HeaderItem title="About" />
@@ -37,7 +40,10 @@ export default function Header() {
                   width={48}
                   height={48}
                />
-               <p className="font-bold text-lg">MeetAstro</p>
+               <div className="h-full flex flex-row mx-0 font-[family-name:var(--font-quinn-bold)]">
+                  <div>M</div>
+                  <div>eet astro</div>
+               </div>
             </div>
             <div className="flex items-center space-x-2 justify-center">
                <EnterButton />

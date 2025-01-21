@@ -18,7 +18,9 @@ function Model({ query, loading, status, audioURL }: ModelProps) {
    const { scene, animations } = useGLTF('/assets/model.glb');
    const { actions } = useAnimations(animations, scene);
    // Update the chatbubble position with screen size
-   const htmlPosition = useUpdatePosition();
+   const {bubblePosition, modelScale, modelPosition} = useUpdatePosition(loading);
+   console.log("modelPosition ====> ", modelPosition);
+   console.log("bubblePosition ========> ", bubblePosition);
    React.useEffect(() => {
       if(actions) {
          Object.values(actions).forEach(action => {
@@ -54,8 +56,8 @@ function Model({ query, loading, status, audioURL }: ModelProps) {
    }, [status, audioURL]);
    return (
       <>
-         <primitive object={scene} scale={2} position={[0, -2, 0]}/>
-         <Html position={htmlPosition}>
+         <primitive object={scene} scale={modelScale} position={modelPosition}/>
+         <Html position={bubblePosition}>
             <ChatBubble 
                message={query} 
                visible={true}
@@ -69,7 +71,7 @@ export default function Astro() {
    const { message, audioURL, loading, status, handleQuery } = useQuery();
    return (
       <section id="About">
-         <div className="relative h-screen w-full flex flex-col justify-between items-center lg:pt-24 lg:pb-12 px-12 pb-20 pt-24 font-[family-name:var(--font-geist-mono)] backdrop-blur-sm"
+         <div className="relative h-screen w-full flex flex-col justify-between items-center lg:pt-24 lg:pb-12 md:px-12 px-0 pb-20 pt-24 font-[family-name:var(--font-geist-mono)] backdrop-blur-sm"
          >
             <div className="absolute inset-0 bg-no-repeat bg-bottom bg-contain 2xl:bottom-[120px] xl:bottom-[160px] lg:bottom-[180px] md:bottom-[200px] bottom-[240px]" style={{ backgroundImage: "url('/assets/spline.svg')" }}></div>
             <div
@@ -131,16 +133,19 @@ export default function Astro() {
             {/* <div className="flex justify-center mx-auto my-auto items-center text-center lg:text-9xl md:text-7xl text-6xl font-bold">
                MEET ASTRO
             </div> */}
-            {/* <div className="absolute inset-0 flex flex-row justify-between items-center mx-auto w-2/3 opacity-80">
-               <div className="text-center lg:text-9xl md:text-7xl text-6xl font-bold">
-                  MEET
+            <div className="absolute xl:inset-0 lg:bottom-20 bottom-32 flex flex-row justify-center items-center mx-auto w-1/2 font-[family-name:var(--font-quinn-bold)] opacity-80 xl:gap-x-64">
+               <div className="flex w-full text-center lg:text-[168px] md:text-9xl text-8xl font-bold xl:ml-20">
+                  <div className="flex flex-row">
+                     <div>M</div>
+                     <div>EET</div>
+                  </div>
                </div>
-               <div className="text-center lg:text-9xl md:text-7xl text-6xl font-bold">
+               <div className="text-center lg:text-[168px] md:text-9xl text-8xl font-bold">
                   ASTRO
                </div>
-            </div> */}
+            </div>
             <div className="w-full h-4/5 my-auto flex flex-row justify-between items-center">
-               <div className="relative w-full h-full">
+               <div className="relative w-full md:mx-auto md:justfiy-between h-full">
                   <Canvas
                      camera={{
                         position: [0, 0, 10],

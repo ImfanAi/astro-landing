@@ -32,7 +32,7 @@ const quinnBold = localFont({
 
 export const metadata: Metadata = {
   title: "Meet Astro",
-  description: "Meet you DeFAi agent",
+  description: "Meet your DeFAi agent",
 };
 
 export default function RootLayout({

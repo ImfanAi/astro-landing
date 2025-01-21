@@ -11,6 +11,7 @@ export default function useQuery() {
    const [audioDuration, setAudioDuration] = useState<number>(0);
    const [audioURL, setAudioURL] = useState<string>("");
    const [loading, setLoading] = useState<boolean>(false);
+   const [_visible, _setVisible] = useState<boolean>(true);
    const [status, setStatus] = useState<AstroStatus>(AstroStatus.Idle);
 
    const handleQuery = async (query: string) => {
