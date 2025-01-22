@@ -1,4 +1,4 @@
-import "../custom/css/featureitem.scss";
+import "../custom/css/featureitem.css";
 const Features = [
    {
       title: "SWAP ATM",
@@ -69,7 +69,7 @@ export default function Feature() {
             <p className="bg-gradient-to-r from-[#962E71] via-[#E15025] to-[#F88B1A] bg-clip-text text-transparent md:text-9xl text-8xl font-extra-bold font-[family-name:var(--font-quinn-bold)] mb-[64px]">Features</p>
             <div className="xl:grid xl:grid-rows-2 xl:grid-flow-col xl:gap-y-10 xl:w-4/5 lg:mx-auto flex flex-col gap-8">
                {Features.map((Feature) => (
-                  <div className="flex flex-col justify-start items-start h-full py-[64px] px-[80px] border-none rounded-3xl bg-[#962E71] bg-opacity-10"
+                  <div className="feature-item relative flex flex-col justify-start items-start h-full py-[64px] px-[80px] border-none rounded-3xl bg-[#962E71] bg-opacity-10"
                      key={`${Feature.title}_key`}
                   >
                      <div className="text-4xl font-bold mb-[20px] text-[#F88B1A]">

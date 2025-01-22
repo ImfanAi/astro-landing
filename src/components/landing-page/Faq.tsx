@@ -11,7 +11,7 @@ type FAQ = {
 const faqs: FAQ[] = [
    {
       title: 'What is MeetAstro and how does it work?',
-      description: 'MeetAstro is a gamified platform that integrates AI, decentralized finance (DeFi), and entertainment. Users interact with "Astro," your AI-powered companion that guides you through DeFi tools and experiences in a gamified way.'
+      description: 'MeetAstro is a gamified platform that combines AI, gaming, decentralized finance (DeFi), and entertainment into one seamless application. It simplifies the complex and often intimidating world of DeFi, making it more accessible to a wider audience by presenting it in a fun and engaging way. Users interact with "Astro," their AI-powered companion, through typing or clicking to complete tasks, participate in challenges, and embark on missions. By doing so, they earn rewards while enhancing their knowledge and skills in the decentralized finance space.'
    },
    {
       title: 'How does revenue sharing work?',
@@ -19,11 +19,11 @@ const faqs: FAQ[] = [
    },
    {
       title: 'What kind of missions can Astro undertake?',
-      description: 'Astro can embark on missions which earn yield tokens, XP, and other rewards. Players can speed up missions by spending in-game gems.'
+      description: 'You can send Astro on a mission that reward players with chests. When opened, these chests contain rewards such as XP, diamonds, gold, and credits. Players can choose to speed up mission completion or open chests more quickly by spending in-game diamonds.'
    },
    {
       title: 'How do social media and referrals contribute to rewards?',
-      description: 'Users earn in-game currency by interacting with social media posts and referring others. The platform tracks interactions, and referrals yield bonuses based on user activity.'
+      description: 'Users can earn in-game currency, diamonds, by engaging with social media posts and referring others to the platform. Additionally, referrals can earn players a percentage of what the referred user spends in the game.'
    },
    {
       title: 'What is the long-term vision for MeetAstro?',
@@ -79,7 +79,7 @@ export default function Faq() {
                      width={150}
                      height={150}
                      layout="responsive"
-                     className="absolute w-full max-w-[80px] md:max-w-[100px] lg:max-w-[100px] xl:max-w-[140px] 2xl:max-w-[160px] 2xl:left-12 2xl:-top-52 xl:left-8 xl:-top-44 lg:-top-28 lg:left-8 left-4 -top-20" 
+                     className="absolute w-full max-w-[80px] md:max-w-[100px] lg:max-w-[100px] xl:max-w-[140px] 2xl:max-w-[160px] 2xl:left-12 2xl:-top-48 xl:left-8 xl:-top-40 lg:-top-28 lg:left-8 md:left-8 md:-top-28 left-6 -top-20" 
                   />
                </div>
                {

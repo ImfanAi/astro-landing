@@ -11,24 +11,26 @@ export default function Header() {
    return (
       <header className="bg-transparent text-white fixed top-0 left-0 w-full 2xl:px-[120px] xl:px-[60px] lg:px-[30px] px-[20px] py-[32px] z-20 font-[family-name:var(--font-man-rope)] backdrop-blur-xl">
          <div className="hidden xl:flex justify-between items-center">
-            <div className="flex items-center space-x-2">
-               <Image
-                  src="/assets/robot.png"
-                  alt="Tailwind CSS"
-                  width={48}
-                  height={48}
-               />
-               <div className="h-full flex flex-row mx-0 text-3xl font-[family-name:var(--font-quinn-bold)]">
-                  <div>M</div>
-                  <div>eet astro</div>
+            <a href="#Astro">
+               <div className="flex items-center space-x-2">
+                  <Image
+                     src="/assets/robot.png"
+                     alt="Tailwind CSS"
+                     width={48}
+                     height={48}
+                  />
+                  <div className="h-full flex flex-row mx-0 text-3xl font-[family-name:var(--font-quinn-bold)]">
+                     <div>M</div>
+                     <div>eet astro</div>
+                  </div>
                </div>
-            </div>
+            </a>
             <div className="flex items-center 2xl:space-x-[70px] xl:space-x-[40px] justify-center">
                <HeaderItem title="About" />
                <HeaderItem title="Features" />
                <HeaderItem title="Roadmap" />
-               <HeaderItem title="JoinUs" />
                <HeaderItem title="FAQs" />
+               <HeaderItem title="JoinUs" />
             </div>
             <EnterButton />
          </div>

@@ -19,7 +19,7 @@ export default function IntroTitle() {
                />
             </div>
             <div className="2xl:text-5xl xl:text-4xl md:text-xl text-lg font-[family-name:var(--font-monterial-thin)]">
-               Astro Is A Combination of
+               Astro is a combination of
             </div>
             <div className="2xl:text-5xl xl:text-4xl lg:text-2xl md:text-xl font-extrabold font-[family-name:var(--font-monterial-bold)]">
                AI, GAMING, ENTERTAINMENT, AND DEFI

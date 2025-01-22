@@ -19,8 +19,6 @@ function Model({ query, loading, status, audioURL }: ModelProps) {
    const { actions } = useAnimations(animations, scene);
    // Update the chatbubble position with screen size
    const {bubblePosition, modelPosition} = useUpdatePosition(loading);
-   console.log("modelPosition ====> ", modelPosition);
-   console.log("bubblePosition ========> ", bubblePosition);
    React.useEffect(() => {
       if(actions) {
          Object.values(actions).forEach(action => {
@@ -70,7 +68,7 @@ function Model({ query, loading, status, audioURL }: ModelProps) {
 export default function Astro() {
    const { message, audioURL, loading, status, handleQuery } = useQuery();
    return (
-      <section id="About">
+      <section id="Astro">
          <div className="relative h-screen w-full flex flex-col justify-between items-center lg:pt-24 lg:pb-12 md:px-12 px-0 pb-20 pt-24 font-[family-name:var(--font-geist-mono)] backdrop-blur-sm"
          >
             <div className="absolute inset-0 bg-no-repeat bg-bottom bg-contain 2xl:bottom-[120px] xl:bottom-[160px] lg:bottom-[180px] md:bottom-[200px] bottom-[240px]" style={{ backgroundImage: "url('/assets/spline.svg')" }}></div>

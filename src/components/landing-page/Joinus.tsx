@@ -68,16 +68,16 @@ export default function Joinus() {
                }} 
             />
             <div className="relative border border-[#962E71] rounded-3xl w-5/6 mx-auto 2xl:pt-24 2xl:pb-48 xl:pt-20 xl:pb-40 lg:pt-16 lg:pb-40 md:pt-12 md:pb-36 pt-12 pb-24">
-               <div className="relative z-2">
+               {/* <div className="relative z-2"> */}
                   <Image
                      src="/assets/join.gif"
                      alt="Astro"
                      width={150}
                      height={150}
                      layout="responsive"
-                     className="absolute w-full max-w-[120px] md:max-w-[160px] lg:max-w-[180px] xl:max-w-[240px] 2xl:max-w-[280px] 2xl:left-0 2xl:top-32 xl:left-0 xl:top-40 lg:top-52 lg:left-0 md:left-0 md:top-60 -left-4 top-64" 
+                     className="absolute z-2 w-full max-w-[120px] md:max-w-[160px] lg:max-w-[180px] xl:max-w-[240px] 2xl:max-w-[280px] left-0 bottom-0" 
                   />
-               </div>
+               {/* </div> */}
                <p className="relative bg-gradient-to-r from-[#962E71] via-[#E15025] to-[#F88B1A] bg-clip-text text-transparent text-7xl font-extra-bold font-[family-name:var(--font-quinn-bold)]">Join Our Community</p>
                <p className="md:text-xl sm:text-md dark:text-white text-white w-4/5 mx-auto mt-4 font-thin">
                   Connect With Fellow DeFAi Farmers And Cultivate Collective Growth In A Harmonious Ecosystem.
@@ -85,7 +85,7 @@ export default function Joinus() {
                <div className="flex justify-between items-center mx-auto md:gap-5 gap-3 2xl:mt-24 xl:mt-20 lg:mt-16 md:mt-12 mt-8 w-1/2">
                   <a href="https://x.com/MeetAstroAI" target="_blank" className="items-center justify-between">
                      <Icon 
-                        icon="akar-icons:twitter-fill"
+                        icon="fa6-brands:x-twitter"
                         className="hover:text-[#F88B1A] w-8 md:w-10 lg:w-12 xl:w-14 2xl:w-16"
                         width="54"
                      />

@@ -1,11 +1,11 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 export default function Footer() {
    return (
-      <footer className="w-5/6 mx-auto z-10">
-         <div className="bg-black text-white border border-white flex justify-between xl:items-center items-start py-4">
+      <footer className="w-5/6 mx-auto z-10 border-t border-t-white border-opacity-10 relative bg-transparent">
+         <div className="bg-transparent text-white flex justify-between items-center py-4">
             <div className="flex md:gap-3 gap-2">
                <a href="https://x.com/MeetAstroAI" target="_blank" className="border border-white bg-transparent lg:p-3 p-1 rounded-full flex gap-2 items-center justify-between bg-opacity-25 backdrop-blur-md">
-                  <Icon icon="akar-icons:twitter-fill" className="md:text-xl text-xs text-white" />
+                  <Icon icon="fa6-brands:x-twitter" className="md:text-xl text-xs text-white" />
                </a>
                <a href="https://t.me/+oh9HXznG6eg5ZTI1" target="_blank" className="border border-white bg-transparent lg:p-3 p-1 rounded-full flex gap-2 items-center justify-between bg-opacity-25 backdrop-blur-md">
                   <Icon icon="teenyicons:telegram-outline" className="md:text-xl text-xs text-white" />
@@ -26,7 +26,7 @@ export default function Footer() {
                      All rights reserved.
                   </div>
                </div>
-               <div>
+               {/* <div>
                   Privacy Policy
                </div>
                <div>
@@ -34,7 +34,7 @@ export default function Footer() {
                </div>
                <div>
                   Conditions
-               </div>
+               </div> */}
 
 
             </div>

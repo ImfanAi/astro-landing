@@ -7,18 +7,18 @@ export function useUpdatePosition (loading: boolean) {
    useEffect(() => {
       const updatePosition = () => {
          if ( loading ) {
-            if ( window.innerHeight < 425 ) {
-               setBubblePosition([0, 2, 0]);
+            if ( window.innerHeight <= 640 ) {
+               setBubblePosition([-2, 2, 0]);
             } else {
-               setBubblePosition([0.9, 2, 0]);
+               setBubblePosition([0.9, 1.8, 0]);
             }
          } else {
             if ( window.innerHeight < 640) {
                setBubblePosition([0.8, 1, 0]);
-               setModelPosition([-2, -3.5, 2]);
+               setModelPosition([0, -1.5, 0]);
             } else if ( window.innerHeight < 768 ) {
                setBubblePosition([0.8, 1, 0]);
-               setModelPosition([-2, -3.5, 2]);
+               setModelPosition([0, -1.5, 0]);
             } else if ( window.innerHeight < 1024 ) {
                setBubblePosition([0.8, 2.4, 0]);
                setModelPosition([0, -1.5, 0]);

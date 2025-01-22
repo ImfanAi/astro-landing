@@ -7,7 +7,7 @@ export enum AstroStatus {
    Speaking = "speaking",
 }
 export default function useQuery() {
-   const [message, setMessage] = useState<string>("Hello! I am Astro, your personal DeFAi Agent!. What are you looking for?");
+   const [message, setMessage] = useState<string>("Hello! I am Astro, your personal DeFAi Agent!. What are you looking for? asdfasdfasdfasdfasdfadsfads");
    const [audioDuration, setAudioDuration] = useState<number>(0);
    const [audioURL, setAudioURL] = useState<string>("");
    const [loading, setLoading] = useState<boolean>(false);

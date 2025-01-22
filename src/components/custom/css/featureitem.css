@@ -1,0 +1,32 @@
+.feature-item::before,
+.feature-item::after {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 30%;
+  background-color: transparent !important;
+  transition: all 0.5s ease; /* Smooth transition for all properties */
+  opacity: 0; /* Initially hidden */
+}
+
+.feature-item::before {
+  top: 0px;
+  left: 0px;
+  border-radius: 32px 0px 0px 0px;
+  box-shadow: -6px -6px 5px rgba(248, 139, 26, 0.8);
+  transform: skew(1deg, 1deg);
+}
+
+.feature-item::after {
+  bottom: 0px;
+  right: 0px;
+  border-radius: 0px 0px 32px 0px;
+  box-shadow: 6px 6px 5px rgba(248, 139, 26, 0.8);
+  transform: skew(-1deg, -1deg);
+}
+
+.feature-item:hover::before,
+.feature-item:hover::after {
+  opacity: 1; /* Show on hover */
+  transform: skew(0deg, 0deg); /* Reset skew on hover for a smooth effect */
+}
