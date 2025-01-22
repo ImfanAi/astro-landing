@@ -5,6 +5,6 @@
    border-right: 1px solid #eee;
    left: 0;
    height: 100%;
-   z-index: 2;
+   z-index: inherit;
    transform:translate(-10%, 0%);
 }

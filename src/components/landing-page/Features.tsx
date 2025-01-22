@@ -14,7 +14,7 @@ const Features = [
    },
    {
       title: "MISSIONS",
-      description: "Send Astro on a mission to earn XP, gold, gems, credits, and tokens. These rewards can help reduce swap costs, boost yields, and More.",
+      description: "Send Astro on a mission to earn XP, gold, diamonds, and credits. These rewards can help reduce swap costs, boost yields, and More.",
    },
 ]
 export default function Feature() {

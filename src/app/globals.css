@@ -41,6 +41,10 @@ section {
   scroll-snap-stop: always; */
 }
 
+section #About {
+  scroll-snap-align: center;
+}
+
 
 @layer utilities {
   .text-balance {

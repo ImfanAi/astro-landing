@@ -18,7 +18,7 @@ const faqs: FAQ[] = [
       description: 'MeetAstro redistributes platform earnings to active users through participation rewards. A portion of the revenue is pooled and distributed once certain thresholds are met.'
    },
    {
-      title: 'What kind of missions can Astro undertake?',
+      title: 'What are missions and chests?',
       description: 'You can send Astro on a mission that reward players with chests. When opened, these chests contain rewards such as XP, diamonds, gold, and credits. Players can choose to speed up mission completion or open chests more quickly by spending in-game diamonds.'
    },
    {

@@ -2,7 +2,7 @@ import IntroTitle from "../custom/intro";
 export default function Intro() {
    return (
       <section id="About">
-         <div className="relative w-full flex flex-col justify-center items-center text-center 2xl:pt-40 xl:pt-20 lg:pt-16 md:pt-10 pt-6 lg:pb-32 pb-20 font-[family-name:var(--font-geist-mono)">
+         <div className="relative w-full h-[100vh] flex flex-col justify-center items-center text-center 2xl:pt-40 xl:pt-20 lg:pt-16 md:pt-10 pt-6 lg:pb-32 pb-20 font-[family-name:var(--font-geist-mono)">
             <div className="absolute inset-0 bg-cover bg-no-repeat bg-center" style={{ backgroundImage: "url('/assets/main.jpg')" }}></div>
             <div className="absolute inset-0 bg-gradient-to-b from-[#151615] to-transparent"></div>
             <div className="absolute inset-0 bg-gradient-to-t from-[#151615] to-transparent"></div>

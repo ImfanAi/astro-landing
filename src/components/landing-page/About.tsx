@@ -142,7 +142,7 @@ export default function Astro() {
                   ASTRO
                </div>
             </div>
-            <div className="w-full h-4/5 my-auto flex flex-row justify-between items-center">
+            <div className="relative w-full h-4/5 my-auto flex flex-row justify-between items-center">
                <div className="relative w-full md:mx-auto md:justfiy-between h-full">
                   <Canvas
                      camera={{
