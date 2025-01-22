@@ -28,12 +28,11 @@ export default function ChatBubble({ message, visible, loading }: ChatBubbleProp
                ease: "easeInOut",
             }}
          className={`'relative shadow-lg text-xs sm:text-sm md:text-md lg:text-lg bg-[#ff703b] bg-opacity-10 backdrop-blur-md border-2 border-[#ff703b]
-                     ${loading ? 'md:p-4 p-2'  : '2xl:w-[360px] xl:w-80 lg:w-60 md:w-48 w-24 2xl:h-28 xl:h-24 lg:h-22 md:h-24 h-28'}
+                     ${loading ? 'md:p-4 p-2'  : '2xl:w-[360px] xl:w-80 lg:w-60 md:w-48 w-24 2xl:h-28 xl:h-24 lg:h-22 md:h-24 h-28 py-3'}
                      ${loading ? 'md:rounded-tl-2xl md:rounded-tr-2xl md:rounded-br-2xl  rounded-tl-lg rounded-tr-lg rounded-br-lg' : 'rounded-tl-2xl rounded-tr-2xl rounded-br-2xl'}
                   `}
          style={{
             overflowY: "auto",
-            overflow: "hidden",
             wordWrap: "break-word",
             overflowWrap: "break-word",
             whiteSpace: "pre-wrap",
