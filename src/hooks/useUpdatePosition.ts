@@ -11,7 +11,7 @@ export function useUpdatePosition (loading: boolean) {
             } else if (window.innerWidth < 768) {
                setBubblePosition([0.9, 0, 0]);
             } else {
-               setBubblePosition([0.9, 1.5, 0]);
+               setBubblePosition([0.5, 2.2, 0]);
             }
          } else {
             if (window.innerWidth < 425) {

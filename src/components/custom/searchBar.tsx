@@ -10,10 +10,10 @@ interface SearchProps {
 export default function Search({ onSearch, ip, remain }: SearchProps) {
    const [query, setQuery] = useState('');
    let placeholder = '';
-   if ( remain === 3 ) {
-      placeholder = `Ask Astro...`;
+   if ( remain !== 0 ) {
+      placeholder =`Chat to Asto – ${remain} replies left`;
    } else {
-      placeholder =`${remain} reponses available`;
+      placeholder = 'No more replies left';
    }
 
    const handleSubmit = (e: React.FormEvent) => {
