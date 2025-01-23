@@ -30,7 +30,7 @@ const quinnBold = localFont({
   weight: "100 900",
 });
 const manRope = localFont({
-  src: "./fonts/ManRope.ttf",
+  src: "./fonts/Manrope.ttf",
   variable: "--font-man-rope",
   weight: "100 900",
 })
