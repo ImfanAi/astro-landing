@@ -75,7 +75,7 @@ export default function Joinus() {
                   layout="responsive"
                   className="absolute z-2 w-full max-w-[120px] md:max-w-[160px] lg:max-w-[180px] xl:max-w-[240px] 2xl:max-w-[280px] left-0 bottom-0" 
                />
-               <p className="relative bg-gradient-to-r from-[#962E71] via-[#E15025] to-[#F88B1A] bg-clip-text text-transparent text-7xl font-extra-bold font-[family-name:var(--font-quinn-bold)]">Join Our Community</p>
+               <p className="relative bg-gradient-to-r from-[#962E71] via-[#E15025] to-[#F88B1A] bg-clip-text text-transparent md:text-7xl text-5xl font-extra-bold font-[family-name:var(--font-quinn-bold)]">Join Our Community</p>
                <p className="md:text-xl sm:text-md dark:text-white text-white w-4/5 mx-auto mt-4 font-thin">
                   Connect With Fellow DeFAi Farmers And Cultivate Collective Growth In A Harmonious Ecosystem.
                </p>

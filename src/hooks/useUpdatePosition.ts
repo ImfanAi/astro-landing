@@ -15,18 +15,18 @@ export function useUpdatePosition (loading: boolean) {
             }
          } else {
             if (window.innerWidth < 425) {
-               setBubblePosition([-1.4, 2.6, 0]);
-               setModelPosition([0, -1.5, 0]);
+               setBubblePosition([-1.2, 2.6, 0]);
+               setModelPosition([0.1, -2, 0]);
             }
             else if ( window.innerWidth < 640 ) {
-               setBubblePosition([-0.8, 2.6, 0]);
-               setModelPosition([-0.8, -1.5, 0]);
+               setBubblePosition([-1.2, 2.5, 0]);
+               setModelPosition([0, -2, 0]);
             } else if ( window.innerWidth < 768 ) {
-               setBubblePosition([-0.2, 2, 0]);
-               setModelPosition([-1, -1.5, 0]);
+               setBubblePosition([-1.5, 2.5, 0]);
+               setModelPosition([0, -2, 0]);
             } else if ( window.innerWidth < 1024 ) {
-               setBubblePosition([-0.1, 2, 0]);
-               setModelPosition([-1, -1.5, 0]);
+               setBubblePosition([-1.5, 2.5, 0]);
+               setModelPosition([0, -2, 0]);
             } else if (window.innerWidth < 1440) {
                setBubblePosition([0.8, 2.4, 0]);
                setModelPosition([0, -1.5, 0]);

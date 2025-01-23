@@ -11,6 +11,7 @@ export default function useQuery() {
    const [audioDuration, setAudioDuration] = useState<number>(0);
    const [audioURL, setAudioURL] = useState<string>("");
    const [loading, setLoading] = useState<boolean>(false);
+   const [remain, setRemain] = useState(3);
    // const [_visible, _setVisible] = useState<boolean>(true);
    const [status, setStatus] = useState<AstroStatus>(AstroStatus.Idle);
 
@@ -30,11 +31,12 @@ export default function useQuery() {
             if (typeof data === 'string') {
                data = JSON.parse(data); // Convert string to JSON
             }
-            const { botResponse, audioUrl, audioDuration } = data;
+            const { botResponse, audioUrl, audioDuration, remaining } = data;
             setMessage(botResponse);
             setAudioDuration(audioDuration);
             setAudioURL(audioUrl);
             setStatus(AstroStatus.Speaking);
+            setRemain(remaining);
             setTimeout(() => {
                setStatus(AstroStatus.Idle);
             }, audioDuration * 1000);
@@ -58,5 +60,5 @@ export default function useQuery() {
       }
    };
 
-   return { message, audioURL, audioDuration, loading, status, handleQuery };
+   return { message, audioURL, audioDuration, loading, status, remain, handleQuery };
 }

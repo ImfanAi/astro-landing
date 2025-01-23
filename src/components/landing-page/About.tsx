@@ -67,7 +67,7 @@ function Model({ query, loading, status, audioURL }: ModelProps) {
    );
 };
 export default function Astro() {
-   const { message, audioURL, loading, status, handleQuery } = useQuery();   
+   const { message, audioURL, loading, status, remain, handleQuery } = useQuery();   
    const clientIP = useClientIP();
    return (
       <section id="Astro">
@@ -130,14 +130,14 @@ export default function Astro() {
                   right: 0,
                }} 
             />
-            <div className="absolute xl:inset-0 lg:bottom-20 bottom-32 flex flex-row justify-center items-center mx-auto w-1/2 font-[family-name:var(--font-quinn-bold)] opacity-80 xl:gap-x-64">
-               <div className="flex w-full text-center lg:text-[168px] md:text-9xl text-8xl font-bold xl:ml-20">
+            <div className="absolute xl:inset-0 xl:bottom-20 bottom-0 flex flex-row justify-center items-center mx-auto w-1/2 font-[family-name:var(--font-quinn-bold)] opacity-80 xl:gap-x-64">
+               <div className="flex w-full text-center xl:text-[168px] md:text-9xl text-8xl font-bold xl:ml-20">
                   <div className="flex flex-row">
                      <div>M</div>
                      <div>EET</div>
                   </div>
                </div>
-               <div className="text-center lg:text-[168px] md:text-9xl text-8xl font-bold">
+               <div className="text-center xl:text-[168px] md:text-9xl text-8xl font-bold">
                   ASTRO
                </div>
             </div>
@@ -160,9 +160,9 @@ export default function Astro() {
                         audioURL={audioURL}
                      />
                   </Canvas>
+                  <Search onSearch={(query: string) => handleQuery(query, clientIP)} ip={clientIP} remain={remain}/>
                </div>
             </div>
-            <Search onSearch={(query: string) => handleQuery(query, clientIP)} ip={clientIP}/>
          </div>
       </section>
    );
