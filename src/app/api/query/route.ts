@@ -1,12 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import axios from "axios";
 import { QUERY_API } from "@/endpoints";
-import { getClientIP } from "@/libs/getIPaddress";
 
 export async function POST(request: NextRequest) {
   try {
-      const { query } = await request.json();
-      const ip = await getClientIP();
+      const { query, ip } = await request.json();
 
       if (!query) {
           return NextResponse.json({ error: 'Query parameter is required' }, { status: 400 });
@@ -14,7 +12,7 @@ export async function POST(request: NextRequest) {
 
       const payload = {
         "query": query,
-        "ip": ip,
+        "ip": ip
       }
 
       const response = await axios.post(`${QUERY_API}`, payload, {

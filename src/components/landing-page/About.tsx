@@ -7,6 +7,7 @@ import Search from "../custom/searchBar";
 import ChatBubble from "../custom/chatbubble";
 import { useUpdatePosition } from "@/hooks/useUpdatePosition";
 import useQuery, { AstroStatus } from "@/hooks/useQuery";
+import useClientIP from "@/hooks/useClientIP";
 
 interface ModelProps {
    query: string;
@@ -66,7 +67,8 @@ function Model({ query, loading, status, audioURL }: ModelProps) {
    );
 };
 export default function Astro() {
-   const { message, audioURL, loading, status, handleQuery } = useQuery();
+   const { message, audioURL, loading, status, handleQuery } = useQuery();   
+   const clientIP = useClientIP();
    return (
       <section id="Astro">
          <div className="relative h-screen w-full flex flex-col justify-between items-center lg:pt-24 lg:pb-12 md:px-12 px-0 pb-20 pt-24 font-[family-name:var(--font-geist-mono)] backdrop-blur-sm"
@@ -160,7 +162,7 @@ export default function Astro() {
                   </Canvas>
                </div>
             </div>
-            <Search onSearch={handleQuery}/>
+            <Search onSearch={(query: string) => handleQuery(query, clientIP)} ip={clientIP}/>
          </div>
       </section>
    );

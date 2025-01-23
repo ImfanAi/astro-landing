@@ -1,4 +1,4 @@
-export async function getClientIP() {
+async function getClientIP() {
    try {
       const response = await fetch('https://api.ipify.org?format=json');
       const data = await response.json();

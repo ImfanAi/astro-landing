@@ -14,8 +14,8 @@ export default function useQuery() {
    // const [_visible, _setVisible] = useState<boolean>(true);
    const [status, setStatus] = useState<AstroStatus>(AstroStatus.Idle);
 
-   const handleQuery = async (query: string) => {
-      const payload = { query };
+   const handleQuery = async (query: string, ip:string) => {
+      const payload = { query, ip };
       setLoading(true);
       setStatus(AstroStatus.Thinking);
       try {

@@ -3,14 +3,15 @@ import * as motion from "motion/react-client";
 import { useState } from "react";
 
 interface SearchProps {
-   onSearch: (query: string) => void;
+   onSearch: (query: string, ip: string) => void;
+   ip: string;
 }
-export default function Search({ onSearch }: SearchProps) {
+export default function Search({ onSearch, ip }: SearchProps) {
    const [query, setQuery] = useState('');
 
    const handleSubmit = (e: React.FormEvent) => {
       e.preventDefault();
-      onSearch(query);
+      onSearch(query, ip);
       setQuery("");
    }
    return (
