@@ -25,9 +25,9 @@ export default function Feature() {
                style={{
                   background: "radial-gradient(circle at 0% 60%, #E15025 0%, transparent 40%)", /* Adjust the blur value as needed */
                   opacity: "30%",
-                  width: "100%", /* Adjust the width as needed */
-                  height: "100%", /* Adjust the height as needed */
-                  position: "absolute", /* Ensure it covers the entire container */
+                  width: "100%",
+                  height: "100%",
+                  position: "absolute",
                   top: 0,
                   left: 0,
                }} 
@@ -36,9 +36,9 @@ export default function Feature() {
                style={{
                   background: "radial-gradient(circle at 0% 40%, #2D1058 0%, transparent 40%)", /* Adjust the blur value as needed */
                   opacity: "30%",
-                  width: "100%", /* Adjust the width as needed */
-                  height: "100%", /* Adjust the height as needed */
-                  position: "absolute", /* Ensure it covers the entire container */
+                  width: "100%",
+                  height: "100%",
+                  position: "absolute",
                   top: 0,
                   left: 0,
                }} 
@@ -47,9 +47,9 @@ export default function Feature() {
                style={{
                   background: "radial-gradient(circle at 100% 70%, #F88B1A 0%, transparent 40%)", /* Adjust the blur value as needed */
                   opacity: "40%",
-                  width: "100%", /* Adjust the width as needed */
-                  height: "100%", /* Adjust the height as needed */
-                  position: "absolute", /* Ensure it covers the entire container */
+                  width: "100%",
+                  height: "100%",
+                  position: "absolute",
                   top: 0,
                   left: 0,
                }} 
@@ -58,9 +58,9 @@ export default function Feature() {
                style={{
                   background: "radial-gradient(circle at 100% 50%, #962E71 0%, transparent 40%)", /* Adjust the blur value as needed */
                   opacity: "40%",
-                  width: "100%", /* Adjust the width as needed */
-                  height: "100%", /* Adjust the height as needed */
-                  position: "absolute", /* Ensure it covers the entire container */
+                  width: "100%",
+                  height: "100%",
+                  position: "absolute",
                   top: 0,
                   left: 0,
                }} 
@@ -69,7 +69,8 @@ export default function Feature() {
             <p className="bg-gradient-to-r from-[#962E71] via-[#E15025] to-[#F88B1A] bg-clip-text text-transparent md:text-9xl text-8xl font-extra-bold font-[family-name:var(--font-quinn-bold)] mb-[64px]">Features</p>
             <div className="xl:grid xl:grid-rows-2 xl:grid-flow-col xl:gap-y-10 xl:w-4/5 lg:mx-auto flex flex-col gap-8">
                {Features.map((Feature) => (
-                  <div className="feature-item relative flex flex-col justify-start items-start h-full py-[64px] px-[80px] border-none rounded-3xl bg-[#962E71] bg-opacity-10"
+                  <div 
+                     className="feature-item relative flex flex-col justify-start items-start h-full py-[64px] px-[80px] border-none rounded-3xl bg-[#962E71] bg-opacity-10"
                      key={`${Feature.title}_key`}
                   >
                      <div className="text-4xl font-bold mb-[20px] text-[#F88B1A]">

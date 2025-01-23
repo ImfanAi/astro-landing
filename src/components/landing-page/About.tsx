@@ -128,9 +128,6 @@ export default function Astro() {
                   right: 0,
                }} 
             />
-            {/* <div className="flex justify-center mx-auto my-auto items-center text-center lg:text-9xl md:text-7xl text-6xl font-bold">
-               MEET ASTRO
-            </div> */}
             <div className="absolute xl:inset-0 lg:bottom-20 bottom-32 flex flex-row justify-center items-center mx-auto w-1/2 font-[family-name:var(--font-quinn-bold)] opacity-80 xl:gap-x-64">
                <div className="flex w-full text-center lg:text-[168px] md:text-9xl text-8xl font-bold xl:ml-20">
                   <div className="flex flex-row">

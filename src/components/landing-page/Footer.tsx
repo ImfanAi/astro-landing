@@ -26,17 +26,6 @@ export default function Footer() {
                      All rights reserved.
                   </div>
                </div>
-               {/* <div>
-                  Privacy Policy
-               </div>
-               <div>
-                  Terms & Conditions
-               </div>
-               <div>
-                  Conditions
-               </div> */}
-
-
             </div>
             
          </div>

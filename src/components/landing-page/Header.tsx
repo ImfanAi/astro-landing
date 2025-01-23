@@ -9,7 +9,7 @@ export default function Header() {
    const [showDrop, setShowDrop] = React.useState(false);
 
    return (
-      <header className="bg-transparent text-white fixed top-0 left-0 w-full 2xl:px-[120px] xl:px-[60px] lg:px-[30px] px-[20px] py-[32px] z-20 font-[family-name:var(--font-man-rope)] backdrop-blur-xl">
+      <header className="bg-transparent text-white fixed top-0 left-0 w-full 2xl:px-[120px] xl:px-[60px] lg:px-[30px] px-[20px] py-[32px] z-20 font-thin font-[family-name:var(--font-man-rope)] backdrop-blur-xl">
          <div className="hidden xl:flex justify-between items-center">
             <a href="#Astro">
                <div className="flex items-center space-x-2">

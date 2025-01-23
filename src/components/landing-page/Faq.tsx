@@ -4,8 +4,8 @@ import FaqItem from "../custom/faqItem";
 import Image from "next/image";
 
 type FAQ = {
-  title: string,
-  description: string
+   title: string,
+   description: string
 }
 
 const faqs: FAQ[] = [
@@ -39,33 +39,33 @@ export default function Faq() {
          <div className="relative align-top flex flex-col justify-center items-center w-full mx-auto md:px-10 2xl:py-32 xl:py-28 lg:py-20 py-12 font-[family-name:var(--font-monterial)]">
             <div
                style={{
-                  background: "radial-gradient(circle at 0% 70%, #2D1058 0%, transparent 40%)", /* Adjust the blur value as needed */
+                  background: "radial-gradient(circle at 0% 70%, #2D1058 0%, transparent 40%)",
                   opacity: "20%",
-                  width: "100%", /* Adjust the width as needed */
-                  height: "100%", /* Adjust the height as needed */
-                  position: "absolute", /* Ensure it covers the entire container */
+                  width: "100%",
+                  height: "100%",
+                  position: "absolute",
                   top: 0,
                   left: 0,
                }} 
             />
             <div
                style={{
-                  background: "radial-gradient(circle at 70% 0%, #962E71 0%, transparent 40%)", /* Adjust the blur value as needed */
+                  background: "radial-gradient(circle at 70% 0%, #962E71 0%, transparent 40%)",
                   opacity: "20%",
-                  width: "100%", /* Adjust the width as needed */
-                  height: "100%", /* Adjust the height as needed */
-                  position: "absolute", /* Ensure it covers the entire container */
+                  width: "100%",
+                  height: "100%",
+                  position: "absolute",
                   top: 0,
                   left: 0,
                }} 
             />
             <div
                style={{
-                  background: "radial-gradient(circle at 70% 100%, #962E71 0%, transparent 40%)", /* Adjust the blur value as needed */
+                  background: "radial-gradient(circle at 70% 100%, #962E71 0%, transparent 40%)",
                   opacity: "20%",
-                  width: "100%", /* Adjust the width as needed */
-                  height: "100%", /* Adjust the height as needed */
-                  position: "absolute", /* Ensure it covers the entire container */
+                  width: "100%",
+                  height: "100%",
+                  position: "absolute",
                   top: 0,
                   left: 0,
                }} 

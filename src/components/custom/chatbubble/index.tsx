@@ -1,6 +1,6 @@
 import { AnimatePresence } from "motion/react";
-import "./index.css";
 import * as motion from "motion/react-client";
+import "./index.css";
 
 interface ChatBubbleProps {
    message: string;
@@ -27,11 +27,14 @@ export default function ChatBubble({ message, visible, loading }: ChatBubbleProp
                times: [0.7, 0.8, 1],
                ease: "easeInOut",
             }}
-         className={`'relative shadow-lg text-xs sm:text-sm md:text-md lg:text-lg bg-[#ff703b] bg-opacity-10 backdrop-blur-md border-2 border-[#ff703b]
-                     ${loading ? 'md:p-4 p-2'  : '2xl:w-[360px] xl:w-80 lg:w-60 md:w-48 w-24 2xl:h-28 xl:h-24 lg:h-22 md:h-24 h-28 py-3'}
-                     ${loading ? 'md:rounded-tl-2xl md:rounded-tr-2xl md:rounded-br-2xl  rounded-tl-lg rounded-tr-lg rounded-br-lg' : 'rounded-tl-2xl rounded-tr-2xl rounded-br-2xl'}
-                  `}
+         className={`
+            relative 
+            `}
          style={{
+            backgroundImage: `url("${loading ? '/assets/chatbubble-loading.svg' : '/assets/chatbubble-response.svg'}")`,  
+            backgroundSize: 'contain', // Adjust as needed (cover, contain, etc.)  
+            backgroundPosition: `${loading ? 'center' : 'center left'}`, // Center the image  
+            backgroundRepeat: 'no-repeat', // Prevent repeating  
             overflowY: "auto",
             wordWrap: "break-word",
             overflowWrap: "break-word",
@@ -39,11 +42,22 @@ export default function ChatBubble({ message, visible, loading }: ChatBubbleProp
             scrollbarWidth: "none",
          }}
       >
+         {/* <Image 
+            src="/assets/chatbubble-response.svg"
+            alt="Astro"
+            fill
+            width={160}
+            height={48}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+            objectFit="cover"
+            layout="responsive"
+            className="absolute bottom-0 -z-10"
+         /> */}
          {loading ? (
-            <div className="flex flex-row items-center gap-x-2 justify-center w-full h-full">
+            <div className="relative flex flex-row items-center gap-x-2 justify-center ml-2 w-[120px] h-[48px]">
                <AnimatePresence>
                   <motion.div 
-                     className="md:w-[12px] md:h-[12px] w-[10px] h-[10px] rounded-full bg-[#ff703b]"
+                     className="w-[10px] h-[10px] rounded-full bg-[#ff703b]"
                      initial={{ opacity: 0}}
                      animate={{ opacity: [1, 0] }}
                      transition={{ 
@@ -57,7 +71,7 @@ export default function ChatBubble({ message, visible, loading }: ChatBubbleProp
                      key={1}
                   />
                   <motion.div 
-                     className="md:w-[12px] md:h-[12px] w-[10px] h-[10px] rounded-full bg-[#ff703b]"
+                     className="w-[10px] h-[10px] rounded-full bg-[#ff703b]"
                      initial={{ opacity: 0}}
                      animate={{ opacity: [1, 0] }}
                      transition={{ 
@@ -72,7 +86,7 @@ export default function ChatBubble({ message, visible, loading }: ChatBubbleProp
                      key={2}
                   />
                   <motion.div 
-                     className="md:w-[12px] md:h-[12px] w-[10px] h-[10px] rounded-full bg-[#ff703b]"
+                     className="w-[10px] h-[10px] rounded-full bg-[#ff703b]"
                      initial={{ opacity: 0}}
                      animate={{ opacity: [1, 0] }}
                      transition={{ 
@@ -90,7 +104,19 @@ export default function ChatBubble({ message, visible, loading }: ChatBubbleProp
             </div>
             
          ) : (
-            <div className="w-11/12 mx-auto py-2">{message}</div>
+            <div 
+               className="relative text-left 2xl:w-[480px] 2xl:h-[120px] xl:w-[480px] xl:h-[100px] lg:w-[320px] lg:h-[100px] md:w-[320px] md:h-[80px] w-[280px] h-[80px] "
+               style={{
+                  overflowY: "auto",
+                  wordWrap: "break-word",
+                  overflowWrap: "break-word",
+                  whiteSpace: "pre-wrap",
+                  scrollbarWidth: "none",
+                  textOverflow: "ellipsis",
+               }}
+            >
+               <p className="2xl:w-5/6 xl:w-2/3 ml-6 xl:mt-3 lg:mt-3">{message}</p>
+            </div>
          )}
       </motion.div>
    )

@@ -23,10 +23,12 @@ export default function useQuery() {
                headers: {
                   'Content-Type': 'application/json',
                },
-            });
+         });
+
+         if (response.status === 200) {
             let data = response.data;
             if (typeof data === 'string') {
-                data = JSON.parse(data); // Convert string to JSON
+               data = JSON.parse(data); // Convert string to JSON
             }
             const { botResponse, audioUrl, audioDuration } = data;
             setMessage(botResponse);
@@ -36,9 +38,21 @@ export default function useQuery() {
             setTimeout(() => {
                setStatus(AstroStatus.Idle);
             }, audioDuration * 1000);
+         } else if (response.status === 429) {
+            console.log("Rate Limit exceeded");
+         }
+         
       } catch (err) {
-         console.error("Error fetching query:", err);
-         setMessage("Sorry, I am unable to process your request at the moment. Please try again later.");
+         setStatus(AstroStatus.Idle);
+         if (axios.isAxiosError(err) && err.response) {
+            if (err.response.status === 429) {
+                  setMessage(err.response.data.message);  
+            } else {
+               setMessage("Sorry, I am unable to process your request at the moment. Please try again later.");  
+            }  
+         } else {
+               setMessage("An unexpected error occurred. Please try again later.");  
+         }  
       } finally {
          setLoading(false);
       }

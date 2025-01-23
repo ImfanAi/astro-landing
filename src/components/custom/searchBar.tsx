@@ -36,7 +36,6 @@ export default function Search({ onSearch }: SearchProps) {
                />
             </div>
          </form>
-
       </motion.div>
    );
 }

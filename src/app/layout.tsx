@@ -14,22 +14,26 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
-// const monterialThin = localFont({
-//   src: "./fonts/Monterial.otf",
-//   variable: "--font-monterial-thin",
-//   weight: "100 900",
-// });
-// const monterialBold = localFont({
-//   src: "./fonts/MonterialBold.otf",
-//   variable: "--font-monterial-bold",
-//   weight: "100 900",
-// });
+const monterialThin = localFont({
+  src: "./fonts/Monterial.otf",
+  variable: "--font-monterial-thin",
+  weight: "100 900",
+});
+const monterialBold = localFont({
+  src: "./fonts/MonterialBold.otf",
+  variable: "--font-monterial-bold",
+  weight: "100 900",
+});
 const quinnBold = localFont({
   src: "./fonts/Quinn.ttf",
   variable: "--font-quinn-bold",
   weight: "100 900",
 });
-
+const manRope = localFont({
+  src: "./fonts/ManRope.ttf",
+  variable: "--font-man-rope",
+  weight: "100 900",
+})
 export const metadata: Metadata = {
   title: "Meet Astro",
   description: "Meet your DeFAi agent",
@@ -43,7 +47,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${quinnBold.variable}  antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${quinnBold.variable} ${monterialThin.variable} ${monterialBold.variable} ${manRope.variable} antialiased`}
       >
         <ScrollLinked />
         <Header />
