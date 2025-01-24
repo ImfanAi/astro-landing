@@ -19,7 +19,7 @@ function Model({ query, loading, status, audioURL }: ModelProps) {
    const { scene, animations } = useGLTF('/assets/model.glb');
    const { actions } = useAnimations(animations, scene);
    // Update the chatbubble position with screen size
-   const {bubblePosition, modelPosition} = useUpdatePosition(loading);
+   const {bubblePosition, modelPosition, bubbleBackground} = useUpdatePosition(loading);
    React.useEffect(() => {
       if(actions) {
          Object.values(actions).forEach(action => {
@@ -61,6 +61,7 @@ function Model({ query, loading, status, audioURL }: ModelProps) {
                message={query} 
                visible={true}
                loading={loading}
+               bubbleBackground={bubbleBackground}
             />
          </Html>
       </>

@@ -6,9 +6,10 @@ interface ChatBubbleProps {
    message: string;
    visible: boolean;
    loading: boolean;
+   bubbleBackground: string;
 }
 
-export default function ChatBubble({ message, visible, loading }: ChatBubbleProps) {
+export default function ChatBubble({ message, visible, loading, bubbleBackground }: ChatBubbleProps) {
    if(!visible) return null;
 
    return (
@@ -31,7 +32,7 @@ export default function ChatBubble({ message, visible, loading }: ChatBubbleProp
             relative 
             `}
          style={{
-            backgroundImage: `url("${loading ? '/assets/chatbubble-loading.svg' : '/assets/chatbubble-response.svg'}")`,  
+            backgroundImage: `url("${bubbleBackground}")`,  
             backgroundSize: 'contain', // Adjust as needed (cover, contain, etc.)  
             backgroundPosition: `${loading ? 'center' : 'center left'}`, // Center the image  
             backgroundRepeat: 'no-repeat', // Prevent repeating  
@@ -105,7 +106,7 @@ export default function ChatBubble({ message, visible, loading }: ChatBubbleProp
             
          ) : (
             <div 
-               className="relative text-left 2xl:w-[480px] 2xl:h-[120px] xl:w-[480px] xl:h-[100px] lg:w-[320px] lg:h-[100px] md:w-[320px] md:h-[80px] w-[280px] h-[80px] "
+               className="relative text-left 2xl:w-[480px] 2xl:h-[120px] xl:w-[480px] xl:h-[100px] lg:w-[320px] lg:h-[120px] md:w-[280px] md:h-[120px] md:pt-4 lg:pt-0 w-[280px] h-[120px] pt-4"
                style={{
                   overflowY: "auto",
                   wordWrap: "break-word",
@@ -115,7 +116,7 @@ export default function ChatBubble({ message, visible, loading }: ChatBubbleProp
                   textOverflow: "ellipsis",
                }}
             >
-               <p className="2xl:w-5/6 xl:w-2/3 ml-6 xl:mt-3 lg:mt-3">{message}</p>
+               <p className="2xl:w-5/6 xl:w-2/3 ml-6 xl:mt-3 lg:mt-3 items-center justify-center">{message}</p>
             </div>
          )}
       </motion.div>
