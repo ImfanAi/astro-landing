@@ -1,3 +1,4 @@
+"use client"
 import { useState } from "react";
 import axios from "axios";
 
@@ -12,7 +13,6 @@ export default function useQuery() {
    const [audioURL, setAudioURL] = useState<string>("");
    const [loading, setLoading] = useState<boolean>(false);
    const [remain, setRemain] = useState(3);
-   // const [_visible, _setVisible] = useState<boolean>(true);
    const [status, setStatus] = useState<AstroStatus>(AstroStatus.Idle);
 
    const handleQuery = async (query: string, ip:string) => {
@@ -48,7 +48,19 @@ export default function useQuery() {
          setStatus(AstroStatus.Idle);
          if (axios.isAxiosError(err) && err.response) {
             if (err.response.status === 429) {
-                  setMessage(err.response.data.message);  
+               let data = err.response.data.data;
+               if (typeof data === 'string') {
+                  data = JSON.parse(data); // Convert string to JSON
+               }
+               const { botResponse, remaining, audioUrl, audioDuration } = data;
+               setMessage(botResponse);
+               setAudioDuration(audioDuration);
+               setAudioURL(audioUrl);
+               setStatus(AstroStatus.Speaking);
+               setRemain(remaining);
+               setTimeout(() => {
+                  setStatus(AstroStatus.Idle);
+               }, audioDuration * 1000);
             } else {
                setMessage("Sorry, I am unable to process your request at the moment. Please try again later.");  
             }  

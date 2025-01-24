@@ -32,8 +32,9 @@ export async function POST(request: NextRequest) {
       // Check if the error is an Axios error and has a response  
       if (axios.isAxiosError(error) && error.response) {  
         // If it's a 429 error, send a specific response  
-        if (error.response.status === 429) {  
-            return NextResponse.json(error.response.data, { status: 429 });  
+        if (error.response.status === 429) {
+            console.log("error data:", error.response.data);
+            return NextResponse.json({ data: JSON.stringify(error.response.data) }, { status: 429 });  
         }  
         // Handle other Axios errors  
         return NextResponse.json({ error: error.response.data }, { status: error.response.status });  
