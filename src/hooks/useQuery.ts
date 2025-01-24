@@ -40,8 +40,21 @@ export default function useQuery() {
             setTimeout(() => {
                setStatus(AstroStatus.Idle);
             }, audioDuration * 1000);
-         } else if (response.status === 429) {
+         } else if (response.status === 419) {
             console.log("Rate Limit exceeded");
+            let data = response.data.data;
+            if (typeof data === 'string') {
+               data = JSON.parse(data); // Convert string to JSON
+            }
+            const { botResponse, remaining, audioUrl, audioDuration } = data;
+            setMessage(botResponse);
+            setAudioDuration(audioDuration);
+            setAudioURL(audioUrl);
+            setStatus(AstroStatus.Speaking);
+            setRemain(remaining);
+            setTimeout(() => {
+               setStatus(AstroStatus.Idle);
+            }, audioDuration * 1000);
          }
          
       } catch (err) {
