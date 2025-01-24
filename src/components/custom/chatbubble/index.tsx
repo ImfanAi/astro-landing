@@ -106,7 +106,7 @@ export default function ChatBubble({ message, visible, loading, bubbleBackground
             
          ) : (
             <div 
-               className="relative text-left 2xl:w-[480px] 2xl:h-[120px] xl:w-[480px] xl:h-[100px] lg:w-[320px] lg:h-[120px] md:w-[280px] md:h-[120px] md:pt-4 lg:pt-0 w-[280px] h-[120px] pt-4"
+               className="relative text-left 2xl:w-[480px] 2xl:h-[120px] xl:w-[480px] xl:h-[100px] lg:w-[320px] lg:h-[120px] md:w-[280px] md:h-[120px] md:pt-4 lg:pt-0 w-[260px] h-[130px] pt-6"
                style={{
                   overflowY: "auto",
                   wordWrap: "break-word",
@@ -116,7 +116,7 @@ export default function ChatBubble({ message, visible, loading, bubbleBackground
                   textOverflow: "ellipsis",
                }}
             >
-               <p className="2xl:w-5/6 xl:w-2/3 ml-6 xl:mt-3 lg:mt-3 items-center justify-center">{message}</p>
+               <p className="2xl:w-5/6 xl:w-2/3 ml-6 xl:mt-3 lg:mt-3 items-center justify-center sm:text-sm text-xs px-2">{message}</p>
             </div>
          )}
       </motion.div>

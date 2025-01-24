@@ -7,7 +7,13 @@ export function useUpdatePosition (loading: boolean) {
    useEffect(() => {
       const updatePosition = () => {
          if ( loading ) {
-            if ( window.innerWidth <= 640 ) {
+            if ( window.innerWidth < 362 ) {
+               setBubblePosition([-0.8, 2.6, 0]);
+               setBubbleBackground('/assets/chatbubble-mobile.svg');
+            } else if ( window.innerWidth <= 400 ) {
+               setBubblePosition([-0.7, 2.5, 0]);
+               setBubbleBackground('/assets/chatbubble-mobile.svg');
+            }else if ( window.innerWidth <= 640 ) {
                setBubblePosition([-0.6, 2.5, 0]);
                setBubbleBackground('/assets/chatbubble-mobile.svg');
             } else if (window.innerWidth < 768) {
@@ -21,12 +27,23 @@ export function useUpdatePosition (loading: boolean) {
                setBubbleBackground('/assets/chatbubble-loading.svg');
             }
          } else {
-            if (window.innerWidth < 425) {
-               setBubblePosition([-1.2, 2.6, 0]);
+            if (window.innerWidth < 362) {
+               setBubblePosition([-1.5, 2.8, 0]);
                setModelPosition([0.1, -2, 0]);
                setBubbleBackground('/assets/chatbubble-mobile.svg');
-            }
-            else if ( window.innerWidth < 640 ) {
+            } else if (window.innerWidth < 380) {
+               setBubblePosition([-1.4, 2.8, 0]);
+               setModelPosition([0.1, -2, 0]);
+               setBubbleBackground('/assets/chatbubble-mobile.svg');
+            } else if (window.innerWidth < 400) {
+               setBubblePosition([-1.35, 2.7, 0]);
+               setModelPosition([0.1, -2, 0]);
+               setBubbleBackground('/assets/chatbubble-mobile.svg');
+            } else if (window.innerWidth < 435) {
+               setBubblePosition([-1.2, 2.7, 0]);
+               setModelPosition([0.1, -2, 0]);
+               setBubbleBackground('/assets/chatbubble-mobile.svg');
+            } else if ( window.innerWidth < 640 ) {
                setBubblePosition([-1.3, 2.5, 0]);
                setModelPosition([0, -2, 0]);
                setBubbleBackground('/assets/chatbubble-mobile.svg');

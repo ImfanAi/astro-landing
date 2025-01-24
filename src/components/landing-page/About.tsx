@@ -156,7 +156,7 @@ export default function Astro() {
                      <spotLight position={[15, 20, 5]} angle={0.3} intensity={0.8} />
                      <Model 
                         query={message}
-                        loading={loading}
+                        loading={true}
                         status={status}
                         audioURL={audioURL}
                      />
