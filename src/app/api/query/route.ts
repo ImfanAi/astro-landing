@@ -25,7 +25,7 @@ export async function POST(request: NextRequest) {
       if (response.status === 200) {
         return NextResponse.json(JSON.stringify(data));
       } else if (response.status === 429) {
-        return NextResponse.json({ message: JSON.stringify(data) }, { status: 429 });
+        return NextResponse.json({ data: JSON.stringify(data) }, { status: 429 });
       }
 
   } catch (error) {
