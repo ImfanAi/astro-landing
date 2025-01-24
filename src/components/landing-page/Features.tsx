@@ -70,7 +70,7 @@ export default function Feature() {
             <div className="xl:grid xl:grid-rows-2 xl:grid-flow-col xl:gap-y-10 xl:w-4/5 lg:mx-auto flex flex-col gap-8">
                {Features.map((Feature) => (
                   <div 
-                     className="feature-item relative flex flex-col justify-start items-start h-full py-[64px] px-[80px] border-none rounded-3xl bg-[#962E71] bg-opacity-10"
+                     className="feature-item relative flex flex-col sm:justify-start sm:items-start sm:text-left justify-center items-center text-center h-full py-[64px] sm:px-[80px] px-[32px] border-none rounded-3xl bg-[#962E71] bg-opacity-10"
                      key={`${Feature.title}_key`}
                   >
                      <div className="text-4xl font-bold mb-[20px] text-[#F88B1A]">

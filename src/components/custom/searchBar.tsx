@@ -41,6 +41,9 @@ export default function Search({ onSearch, ip, remain }: SearchProps) {
                   autoComplete="off"
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
+                  style={{
+                     overflowX: 'auto',
+                  }}
                />
             </div>
          </form>

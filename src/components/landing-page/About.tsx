@@ -132,13 +132,13 @@ export default function Astro() {
                }} 
             />
             <div className="absolute xl:inset-0 xl:bottom-20 bottom-0 flex flex-row justify-center items-center mx-auto w-1/2 font-[family-name:var(--font-quinn-bold)] opacity-80 xl:gap-x-64">
-               <div className="flex w-full text-center xl:text-[168px] md:text-9xl text-8xl font-bold xl:ml-20">
+               <div className="flex w-full text-center xl:text-[168px] md:text-9xl sm:text-8xl text-6xl font-bold xl:ml-20">
                   <div className="flex flex-row">
                      <div>M</div>
                      <div>EET</div>
                   </div>
                </div>
-               <div className="text-center xl:text-[168px] md:text-9xl text-8xl font-bold">
+               <div className="text-center xl:text-[168px] md:text-9xl sm:text-8xl text-6xl font-bold">
                   ASTRO
                </div>
             </div>
