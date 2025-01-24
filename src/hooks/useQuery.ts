@@ -40,7 +40,7 @@ export default function useQuery() {
             setTimeout(() => {
                setStatus(AstroStatus.Idle);
             }, audioDuration * 1000);
-         } else if (response.status === 419) {
+         } else if (response.status === 1001) {
             console.log("Rate Limit exceeded");
             let data = response.data.data;
             if (typeof data === 'string') {
