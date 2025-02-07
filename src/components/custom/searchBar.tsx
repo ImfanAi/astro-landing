@@ -6,20 +6,25 @@ interface SearchProps {
    onSearch: (query: string, ip: string) => void;
    ip: string;
    remain: number;
+   disabled: boolean;
 }
-export default function Search({ onSearch, ip, remain }: SearchProps) {
+export default function Search({ onSearch, ip, remain, disabled }: SearchProps) {
    const [query, setQuery] = useState('');
    let placeholder = '';
-   if ( remain !== 0 ) {
-      placeholder =`Chat to Asto – ${remain} replies left`;
+   if (disabled) {
+      placeholder = 'Please wait...';
+   } else if (remain !== 0) {
+      placeholder = `Chat to Astro – ${remain} replies left`;
    } else {
       placeholder = 'No more replies left';
    }
 
    const handleSubmit = (e: React.FormEvent) => {
       e.preventDefault();
-      onSearch(query, ip);
-      setQuery("");
+      if(!disabled) {
+         onSearch(query, ip);
+         setQuery("");
+      }
    }
    return (
       <motion.div 
@@ -44,6 +49,7 @@ export default function Search({ onSearch, ip, remain }: SearchProps) {
                   style={{
                      overflowX: 'auto',
                   }}
+                  disabled={disabled}
                />
             </div>
          </form>

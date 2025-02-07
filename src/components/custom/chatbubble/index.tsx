@@ -29,7 +29,8 @@ export default function ChatBubble({ message, visible, loading, bubbleBackground
                ease: "easeInOut",
             }}
          className={`
-            relative 
+            relative pt-1
+            ${!loading ? '2xl:w-[480px] 2xl:h-[120px] xl:w-[480px] xl:h-[100px] lg:w-[320px] lg:h-[120px] md:w-[280px] md:h-[120px] md:pt-4 lg:pt-0 w-[260px] h-[100px]': ''}
             `}
          style={{
             backgroundImage: `url("${bubbleBackground}")`,  
@@ -43,17 +44,6 @@ export default function ChatBubble({ message, visible, loading, bubbleBackground
             scrollbarWidth: "none",
          }}
       >
-         {/* <Image 
-            src="/assets/chatbubble-response.svg"
-            alt="Astro"
-            fill
-            width={160}
-            height={48}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
-            objectFit="cover"
-            layout="responsive"
-            className="absolute bottom-0 -z-10"
-         /> */}
          {loading ? (
             <div className="relative flex flex-row items-center gap-x-2 justify-center ml-2 w-[120px] h-[48px]">
                <AnimatePresence>
@@ -106,7 +96,7 @@ export default function ChatBubble({ message, visible, loading, bubbleBackground
             
          ) : (
             <div 
-               className="relative text-left 2xl:w-[480px] 2xl:h-[120px] xl:w-[480px] xl:h-[100px] lg:w-[320px] lg:h-[120px] md:w-[280px] md:h-[120px] md:pt-4 lg:pt-0 w-[260px] h-[130px] pt-6"
+               className="absolute text-left 2xl:w-[480px] 2xl:h-[100px] xl:w-[480px] xl:h-[80px] lg:w-[320px] lg:h-[80px] md:w-[280px] md:h-[80px] md:pt-4 lg:pt-0 w-[260px] h-[80px]"
                style={{
                   overflowY: "auto",
                   wordWrap: "break-word",
