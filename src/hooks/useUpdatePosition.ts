@@ -28,19 +28,19 @@ export function useUpdatePosition (loading: boolean) {
             }
          } else {
             if (window.innerWidth < 362) {
-               setBubblePosition([-1.5, 2.8, 0]);
+               setBubblePosition([-1.1, 2.5, 0]);
                setModelPosition([0.1, -2, 0]);
                setBubbleBackground('/assets/chatbubble-mobile.svg');
             } else if (window.innerWidth < 380) {
-               setBubblePosition([-1.4, 2.8, 0]);
+               setBubblePosition([-1.1, 2.5, 0]);
                setModelPosition([0.1, -2, 0]);
                setBubbleBackground('/assets/chatbubble-mobile.svg');
             } else if (window.innerWidth < 400) {
-               setBubblePosition([-1.35, 2.7, 0]);
+               setBubblePosition([-1, 2.5, 0]);
                setModelPosition([0.1, -2, 0]);
                setBubbleBackground('/assets/chatbubble-mobile.svg');
             } else if (window.innerWidth < 435) {
-               setBubblePosition([-1.2, 2.7, 0]);
+               setBubblePosition([-0.9, 2.4, 0]);
                setModelPosition([0.1, -2, 0]);
                setBubbleBackground('/assets/chatbubble-mobile.svg');
             } else if ( window.innerWidth < 640 ) {

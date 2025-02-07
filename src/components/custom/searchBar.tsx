@@ -28,7 +28,7 @@ export default function Search({ onSearch, ip, remain, disabled }: SearchProps) 
    }
    return (
       <motion.div 
-         className="absolute md:bottom-0 -bottom-5 left-1/2 -translate-x-1/2 md:w-1/2 w-[240px] lg:mx-auto rounded-full border-2 border-[#E15025] bg-[#E15025] bg-opacity-5 backdrop-blur-md"
+         className="absolute md:bottom-0 -bottom-5 left-1/2 -translate-x-1/2 md:w-1/2 w-5/6 lg:mx-auto rounded-full border-2 border-[#E15025] bg-[#E15025] bg-opacity-5 backdrop-blur-md"
       >
          <form onSubmit={handleSubmit}>
             <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-300 sr-only dark:text-white">Search</label>
