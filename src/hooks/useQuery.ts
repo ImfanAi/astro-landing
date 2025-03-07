@@ -1,5 +1,6 @@
 "use client"
 import { useState } from "react";
+import { REQUEST_LIMIT } from "@/endpoints";
 import axios from "axios";
 
 export enum AstroStatus {
@@ -13,7 +14,7 @@ export default function useQuery() {
    const [audioDuration, setAudioDuration] = useState<number>(0);
    const [audioURL, setAudioURL] = useState<string>("");
    const [loading, setLoading] = useState<boolean>(false);
-   const [remain, setRemain] = useState(3);
+   const [remain, setRemain] = useState(REQUEST_LIMIT);
    const [status, setStatus] = useState<AstroStatus>(AstroStatus.Idle);
 
    const handleQuery = async (query: string, ip:string) => {
