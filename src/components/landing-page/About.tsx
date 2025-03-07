@@ -161,7 +161,7 @@ export default function Astro() {
                         audioURL={audioURL}
                      />
                   </Canvas>
-                  <Search onSearch={(query: string) => handleQuery(query, clientIP)} ip={clientIP} remain={remain} disabled={loading}/>
+                  <Search onSearch={(query: string) => handleQuery(query, clientIP)} ip={clientIP} remain={(remain)} disabled={loading}/>
                </div>
             </div>
          </div>
